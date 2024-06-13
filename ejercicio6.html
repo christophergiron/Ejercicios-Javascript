@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de cliclo for en javascript</title>
+</head>
+<body>
+    <h1>Generar una lista de los primeros 10 numero naturales</h1>
+    <button onclick="generarLista()">Generar Lista</button>
+    <ul id="listaNumeros"></ul>
+    <script>
+        function generarLista(){
+            //obtener el elemento de la lista
+            const lista = document.getElementById('listaNumeros');
+            //lista la lista anterior 
+            lista.innerHTML = '';
+            //usar un ciclo for para generar los primeros 10 numeros naturales
+            for (let i = 1; i <= 10; i++) {
+                //crear un nuevo elemento de lista
+                const item = document.createElement('li');
+                //establecer el contenido del elemento de lista 
+                item.textContent = `Numero ${i}`;
+                //añadir el nuevo elemento de la lsita al elemento ul 
+                lista.appendChild(item)
+            }
+        }
+    </script>
+</body>
+</html>
